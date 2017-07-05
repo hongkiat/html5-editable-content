@@ -1,0 +1,25 @@
+.wrapper {
+	margin: 50px auto;
+	width: 600px;
+}
+.wrapper h1,
+.wrapper h2,
+.wrapper h3 {
+	padding-bottom: 15px;
+	border-bottom: 1px dotted #ccc;
+}
+.wrapper p {
+	font-size: 11pt;
+}
+.wrapper [contenteditable="true"] { 
+	padding: 10px; 
+	border: 1px dashed #aaa;
+	outline: 0;
+}
+.wrapper [contenteditable="true"]:hover {
+	background-color: #FF9;
+  	border: 1px dashed #aaa;
+}
+.wrapper button {
+	margin-top: 10px;
+}

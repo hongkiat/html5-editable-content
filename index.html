@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>HTML5 ContentEditable Attribute - Hongkiat.com</title>
+
+<!--  jquery -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="../_nav/js/jquery.js"><\/script>')</script>
+
+<!-- demo scripts -->
+<link rel="stylesheet" href="style.css">
+
+<!-- nav script -->
+<script src="../_nav/js/nav.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+<!-- nav meta -->
+<div class="demo-meta">
+  <h1 class="demo-title">HTML5 ContentEditable Attribute</h1>
+  <p class="demo-desc">A very nice addition in HTML5, ContentEditable. This demo shows how to use it to enable editing in the front-end with HTML5 ContentEditable</p>
+</div>
+
+<!-- demo content -->
+<div class="wrapper">
+
+<p><small>Try to edit and save the change with the button</small></p>
+<article id="content2" contenteditable="true">
+	<p>Sweet roll tiramisu chocolate bar sugar plum caramels tootsie roll caramels. Chocolate cake wypas cotton candy icing. Applicake sesame snaps liquorice pastry croissant caramels fruitcake gingerbread biscuit. Donut toffee candy canes.</p>
+</article>
+<button id="save">Save Changes</button>
+</div>
+
+<!-- begin the script -->
+<script>
+	var theContent = $('#content2');// set the content
+	
+	$('#save').on('click', function(){ // store the new content in localStorage when the button is clicked
+		var editedContent 	= theContent.html();
+		localStorage.newContent = editedContent;
+	});
+
+	if(localStorage.getItem('newContent')) { // apply the newContent when it is exist ini localStorage
+		theContent.html(localStorage.getItem('newContent'));
+	}
+</script>
+
+</body>
+</html>
